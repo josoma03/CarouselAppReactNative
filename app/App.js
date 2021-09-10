@@ -1,15 +1,13 @@
 import React from 'react';
-import { Carousel } from "./src/pages/Carousel";
+import CarouselPage from "./src/pages/CarouselPage";
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import reducers from './src/redux/reducers'
-import ReduxThunk from 'redux-thunk'
+import store from './src/redux/store/store'
 
 export default function App() {
-  const store = createStore(reducers, {}, applyMiddleware(ReduxThunk))
+
   return (
     <Provider store={store}>
-      <Carousel />
+      <CarouselPage />
     </Provider>
   )
 }

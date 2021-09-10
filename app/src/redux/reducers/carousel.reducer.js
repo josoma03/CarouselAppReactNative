@@ -9,14 +9,13 @@ import {
 const INITIAL_STATE = {
     error: '',
     loading: false,
-    data: null
+    data: []
 };
 
 export default (state = INITIAL_STATE, action) => {
-
     switch (action.type) {
         case CAROUSEL_FETCH_IMAGE_START:
-            return { ...state, loading: true, error: '' }
+            return { ...state, loading: true, error: '', data: [] }
         case CAROUSEL_FETCH_IMAGE_SUCCESS:
             return { ...state, ...INITIAL_STATE, data: action.payload }
         case CAROUSEL_FETCH_IMAGE_FAIL:
