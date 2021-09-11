@@ -3,19 +3,27 @@ import {
     CAROUSEL_FETCH_IMAGE_FAIL,
     CAROUSEL_FETCH_IMAGE_START,
     CAROUSEL_FETCH_IMAGE_SUCCESS,
+    CAROUSEL_UPDATE_PAGE,
     mac
 } from './types'
+import { numBlocks } from './../../styles/config'
 
 //ACTIONS CREATOR
+const updatePageAction = mac(CAROUSEL_UPDATE_PAGE, 'payload')
 const fetchStartAction = mac(CAROUSEL_FETCH_IMAGE_START)
 const fetchFailAction = mac(CAROUSEL_FETCH_IMAGE_FAIL)
-const fetchSuccessAction = mac(CAROUSEL_FETCH_IMAGE_SUCCESS, 'payload')
+const fetchSuccessAction = mac(CAROUSEL_FETCH_IMAGE_SUCCESS, 'payload', 'count')
 /*Equivalente:
 const fetchSuccessAction = payload => ({
     type: CAROUSEL_FETCH_IMAGE_SUCCESS,
     payload,
 })*/
 
+export const updatePage = (page) => {
+    return (dispatch) => {
+        dispatch(updatePageAction(page))
+    }
+}
 export const getImages = () => {
     return (dispatch) => {
         dispatch(fetchStartAction())
@@ -79,8 +87,9 @@ export const getImages = () => {
                         image: "https://thepuzzle.digital/wp-content/uploads/2020/12/tenpo-app-tarjeta-mastercard.png"
                     },
                 ]
-                dispatch(fetchSuccessAction(objResult))
-            }, 1500)
+                let countPages = Math.ceil(objResult.length / numBlocks)
+                dispatch(fetchSuccessAction(objResult, countPages))
+            }, 200)
         } catch (e) {
             dispatch(fetchFailAction())
         }

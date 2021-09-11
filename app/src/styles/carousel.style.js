@@ -6,9 +6,9 @@ const styles = StyleSheet.create({
         flex: 1,
         marginTop: 40,
         marginHorizontal: contentMargin,
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        alignContent: 'center',
+        // justifyContent: 'flex-start',
+        // alignItems: 'center',
+        // alignContent: 'center',
         backgroundColor: '#FFFFFF',
     },
 });
