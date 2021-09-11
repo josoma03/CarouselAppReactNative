@@ -5,7 +5,7 @@ import { getImages, updatePage } from '../redux/actions'
 import styles from '../styles/carousel.style'
 import CarouselItem from '../components/carouselItem'
 import CarouselPagination from '../components/carouselPagination';
-import { contentMargin } from '../styles/config';
+import { contentMargin } from '../config/config';
 
 const width = Dimensions.get('window').width
 
@@ -27,21 +27,12 @@ const CarouselScreen = props => {
         }
     }, [props.currentPage])
 
-
-    const onScroll = event => {
-        //When scrolling, update the page
-        let newPage = Math.ceil(parseFloat(event.nativeEvent.contentOffset.x / width));
-        if (props.currentPage != newPage) {
-            props.updatePage(newPage)
-        }
-    }
-
     return (
 
         <View style={styles.container}>
-            <Text>Page: {props.currentPage}</Text>
+            <Text>Page: {props.currentPage + 1}</Text>
             <Text>Count pages: {props.countPages}</Text>
-            <Text>Count images: {props.arrImages.length}</Text>
+            <Text>Count cards: {props.arrImages.length}</Text>
             {
                 props.loading ? <ActivityIndicator size={'large'} color="#007bff" />
                     :
@@ -51,7 +42,6 @@ const CarouselScreen = props => {
                             pagingEnabled
                             horizontal
                             scrollEnabled={false}
-                            // onScroll={onScroll}
                             scrollEventThrottle={0}
                             showsHorizontalScrollIndicator={false} >
                             {

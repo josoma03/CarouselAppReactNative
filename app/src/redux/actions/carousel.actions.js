@@ -6,7 +6,7 @@ import {
     CAROUSEL_UPDATE_PAGE,
     mac
 } from './types'
-import { numBlocks } from './../../styles/config'
+import { numCards } from '../../config/config'
 
 //ACTIONS CREATOR
 const updatePageAction = mac(CAROUSEL_UPDATE_PAGE, 'payload')
@@ -87,9 +87,9 @@ export const getImages = () => {
                         image: "https://thepuzzle.digital/wp-content/uploads/2020/12/tenpo-app-tarjeta-mastercard.png"
                     },
                 ]
-                let countPages = Math.ceil(objResult.length / numBlocks)
+                let countPages = Math.ceil(objResult.length / numCards)
                 dispatch(fetchSuccessAction(objResult, countPages))
-            }, 200)
+            }, 1000)
         } catch (e) {
             dispatch(fetchFailAction())
         }

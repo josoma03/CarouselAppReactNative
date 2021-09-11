@@ -1,7 +1,7 @@
 import { StyleSheet, Dimensions } from 'react-native'
-import { numBlocks, contentMargin, cardMargin } from './config'
+import { numCards, contentMargin, cardMargin } from '../config/config'
 const { width: screenWidth } = Dimensions.get('window')
-const widthCard = ((screenWidth - (contentMargin * 2) - (cardMargin * 2 * numBlocks)) / numBlocks)
+const widthCard = ((screenWidth - (contentMargin * 2) - (cardMargin * 2 * numCards)) / numCards)
 const widthImage = widthCard - 10
 
 const styles = StyleSheet.create({

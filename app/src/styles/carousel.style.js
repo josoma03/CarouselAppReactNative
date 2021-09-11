@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { contentMargin } from './config'
+import { contentMargin } from '../config/config'
 
 const styles = StyleSheet.create({
     container: {
