@@ -15,7 +15,6 @@ const INITIAL_STATE = {
 };
 
 export default (state = INITIAL_STATE, action) => {
-    console.log("action.payload ", action)
     switch (action.type) {
         case CAROUSEL_FETCH_IMAGE_START:
             return { ...state, loading: true, error: '', currentPage: 0, countPages: 0, arrImages: [] }
@@ -24,7 +23,6 @@ export default (state = INITIAL_STATE, action) => {
         case CAROUSEL_FETCH_IMAGE_FAIL:
             return { ...state, ...INITIAL_STATE, error: 'Error loading images' }
         case CAROUSEL_UPDATE_PAGE:
-
             return { ...state, currentPage: action.payload }
         default:
             return state;

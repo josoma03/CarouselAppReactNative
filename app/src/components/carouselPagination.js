@@ -6,7 +6,6 @@ import { updatePage } from '../redux/actions'
 
 
 const CarouselPaginationButton = ({ text, onPress, isEnable }) => {
-    console.log(text, isEnable)
     return (
         <TouchableHighlight disabled={!isEnable} style={[styles.contentButton, isEnable ? styles.contentButtonEnabled : styles.contentButtonDisabled]} onPress={onPress}>
             <Text style={styles.text}>{text}</Text>
@@ -14,14 +13,15 @@ const CarouselPaginationButton = ({ text, onPress, isEnable }) => {
     )
 }
 const CarouselPagination = props => {
+    const isEnableBack = props.currentPage != 0
+    const isEnableNext = props.currentPage != (props.countPages - 1)
     const nextPag = () => {
         props.updatePage(props.currentPage + 1)
     }
     const prevPag = () => {
         props.updatePage(props.currentPage - 1)
     }
-    const isEnableBack = props.currentPage != 0
-    const isEnableNext = props.currentPage != (props.countPages - 1)
+
     return (
         <View style={styles.content}>
             <CarouselPaginationButton text="<" onPress={prevPag} isEnable={isEnableBack} />

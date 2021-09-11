@@ -5,19 +5,32 @@ import { getImages, updatePage } from '../redux/actions'
 import styles from '../styles/carousel.style'
 import CarouselItem from '../components/carouselItem'
 import CarouselPagination from '../components/carouselPagination';
+import { contentMargin } from '../styles/config';
 
+const width = Dimensions.get('window').width
 
 const CarouselScreen = props => {
     const scrollRef = useRef()
 
     useEffect(() => {
+        //load the images and update state
         props.getImages()
     }, [])
 
+    useEffect(() => {
+        //Event when changing page, set scrollview
+        if (scrollRef.current !== null) {
+            scrollRef.current.scrollTo({
+                x: (width - (contentMargin * 2)) * (props.currentPage),
+                animated: true,
+            });
+        }
+    }, [props.currentPage])
 
 
     const onScroll = event => {
-        let newPage = Math.ceil(parseFloat(event.nativeEvent.contentOffset.x / Dimensions.get('window').width));
+        //When scrolling, update the page
+        let newPage = Math.ceil(parseFloat(event.nativeEvent.contentOffset.x / width));
         if (props.currentPage != newPage) {
             props.updatePage(newPage)
         }
@@ -37,7 +50,8 @@ const CarouselScreen = props => {
                             ref={scrollRef}
                             pagingEnabled
                             horizontal
-                            onScroll={onScroll}
+                            scrollEnabled={false}
+                            // onScroll={onScroll}
                             scrollEventThrottle={0}
                             showsHorizontalScrollIndicator={false} >
                             {
@@ -61,5 +75,4 @@ const CarouselScreen = props => {
 const mapStateToProps = (state) => {
     return state.carouselReducer            //reducers/index.js
 }
-
 export default connect(mapStateToProps, { getImages, updatePage })(CarouselScreen);
