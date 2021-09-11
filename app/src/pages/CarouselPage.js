@@ -1,26 +1,42 @@
 import React, { useEffect } from 'react';
-import { Text, View } from "react-native"
+import { ActivityIndicator, ScrollView, Text, View } from "react-native"
 import { connect } from 'react-redux'
 import { getImages } from '../redux/actions'
+import styles from '../styles/carousel.style'
+import CarouselItem from '../components/carouselItem'
 
-const CarouselPage = ({ data, loading, error, getImages }) => {
-    console.log(data.length)
 
-    function reload() {
+const CarouselPage = ({ arrImages, loading, error, getImages }) => {
+    useEffect(() => {
         getImages()
-    }
+    }, [])
 
     return (
-        <View style={{ justifyContent: 'center', alignItems: 'center', height: '100%' }}>
-            {loading && <Text>Cargando...</Text>}
-            <Text onPress={reload}>Carousel {data.length}</Text>
 
+        <View style={styles.container}>
+            <ScrollView pagingEnabled horizontal showsHorizontalScrollIndicator={false} >
+                {
+                    loading ? <ActivityIndicator size={'large'} color="#007bff" />
+                        :
+                        <>
+                            {arrImages.length == 0
+                                ? <Text>No images</Text>
+                                : arrImages.map((item, index) => {
+                                    return <CarouselItem
+                                        key={index}
+                                        index={index}
+                                        item={item}
+                                    />
+                                })}
+                        </>
+                }
+            </ScrollView>
         </View>
     )
 }
 const mapStateToProps = (state) => {
-    const { data, error, loading } = state.carouselReducer        //reducers/index.js
-    return { data, error, loading }
+    const { arrImages, error, loading } = state.carouselReducer        //reducers/index.js
+    return { arrImages, error, loading }
 }
 
 export default connect(mapStateToProps, { getImages })(CarouselPage);

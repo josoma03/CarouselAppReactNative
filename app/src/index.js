@@ -1,6 +1,9 @@
 import * as React from "react";
-import Carousel from "./pages/Carousel";
+import { SafeAreaView } from "react-native";
+import Carousel from "./pages/carouselPage";
 
 export default () => (
-    <Carousel />
+    <SafeAreaView style={{ flex: 1 }}>
+        <Carousel />
+    </SafeAreaView>
 );

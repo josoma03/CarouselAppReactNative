@@ -24,7 +24,7 @@ export const getImages = () => {
                 let objResult = [
                     {
                         title: "Puzzle",
-                        image: "https://thepuzzle.digital/wp-content/uploads/2020/12/logo-puzzle.svg"
+                        image: "https://d3v0px0pttie1i.cloudfront.net/uploads/user/logo/6853294/e0d59971.png"
                     },
                     {
                         title: "Plan Auto - Phone",
