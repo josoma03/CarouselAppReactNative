@@ -14,7 +14,9 @@ const CarouselScreen = props => {
 
     useEffect(() => {
         //load the images and update state
-        props.getImages()
+        if (props.arrImages.length == 0) {
+            props.getImages()
+        }
     }, [])
 
     useEffect(() => {
