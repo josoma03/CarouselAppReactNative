@@ -33,8 +33,8 @@ const CarouselScreen = props => {
 
         <View style={styles.container}>
             <Text>Page: {props.currentPage + 1}</Text>
-            <Text>Count pages: {props.countPages}</Text>
-            <Text>Count cards: {props.arrImages.length}</Text>
+            <Text>Total pages: {props.countPages}</Text>
+            <Text>Total cards: {props.arrImages.length}</Text>
             {
                 props.loading ? <ActivityIndicator size={'large'} color="#007bff" />
                     :

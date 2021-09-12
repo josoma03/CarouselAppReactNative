@@ -31,60 +31,84 @@ export const getImages = () => {
             setTimeout(() => {
                 let objResult = [
                     {
-                        title: "Puzzle",
-                        image: "https://d3v0px0pttie1i.cloudfront.net/uploads/user/logo/6853294/e0d59971.png"
+                        title: "Medellin",
+                        image: "https://wander-lush.org/wp-content/uploads/2018/11/Emily-Lush-Comuna-13-Medellin-26-1.jpg"
                     },
                     {
-                        title: "Plan Auto - Phone",
-                        image: "https://thepuzzle.digital/wp-content/uploads/2021/01/mobile-planauto.png"
+                        title: "Cartagena",
+                        image: "https://wander-lush.org/wp-content/uploads/2021/01/Cartagena-Depositphotos-Places-in-Colombia.jpg"
                     },
                     {
-                        title: "Plan Auto - About",
-                        image: "https://thepuzzle.digital/wp-content/uploads/2021/01/planauto-image2.png"
+                        title: "Bogotá",
+                        image: "https://wander-lush.org/wp-content/uploads/2021/01/Bogota-Depositphotos-Places-in-Colombia.jpg"
                     },
                     {
-                        title: "Plan Auto - Facts",
-                        image: "https://thepuzzle.digital/wp-content/uploads/2021/01/macbook-planauto.png"
+                        title: "Cali",
+                        image: "https://wander-lush.org/wp-content/uploads/2021/01/Cali-Depositphotos-Places-in-Colombia.jpg"
                     },
                     {
-                        title: "INgagedIN - Phone",
-                        image: "https://thepuzzle.digital/wp-content/uploads/2021/01/ingagedin-mobile.png"
+                        title: "Guatape",
+                        image: "https://wander-lush.org/wp-content/uploads/2021/01/Guatape-Depositphotos-Places-in-Colombia.jpg"
                     },
                     {
-                        title: "INgagedIN - The Challenge",
-                        image: "https://thepuzzle.digital/wp-content/uploads/2021/01/img-ingagein.png"
+                        title: "Villa de Leyva",
+                        image: "https://wander-lush.org/wp-content/uploads/2021/01/Villa-De-Leyva-Depositphotos-Places-in-Colombia.jpg"
                     },
                     {
-                        title: "Gesinco - Pone",
-                        image: "https://thepuzzle.digital/wp-content/uploads/2021/01/phone-gesinco.png"
+                        title: "Raquira",
+                        image: "https://wander-lush.org/wp-content/uploads/2021/01/Raquira-Depositphotos-Places-in-Colombia.jpg"
                     },
                     {
-                        title: "Gesinco - The Challenge",
-                        image: "https://thepuzzle.digital/wp-content/uploads/2021/01/macbook-gesinco.png"
+                        title: "Popayán",
+                        image: "https://wander-lush.org/wp-content/uploads/2018/11/08-Popayan-Catedral-Basi%CC%81lica-de-Nuestra-Sen%CC%83ora-de-la-Asuncio%CC%81n-de-Popaya%CC%81n-Colombia-1-Feliperma15-Wikicommons.jpg"
                     },
                     {
-                        title: "Gesinco - Facts (SSO)",
-                        image: "https://thepuzzle.digital/wp-content/uploads/2021/01/macbook-gesinco-3-1.png"
+                        title: "Guadalupe",
+                        image: "https://wander-lush.org/wp-content/uploads/2018/11/09-Guadalupe-The-Church-at-Guadalupe.jpg"
                     },
                     {
-                        title: "Gesinco - Tech challenge",
-                        image: "https://thepuzzle.digital/wp-content/uploads/2021/01/macbook-gesinco-2-2.png"
+                        title: "San Jeronimo",
+                        image: "https://wander-lush.org/wp-content/uploads/2018/11/10-san-jeronimo-colombia.jpg"
                     },
                     {
-                        title: "Cosmo - Phone",
-                        image: "https://thepuzzle.digital/wp-content/uploads/2021/01/image-cosmo-1-1136x2048.png"
+                        title: "Minca",
+                        image: "https://wander-lush.org/wp-content/uploads/2018/11/11-Minca.jpg"
                     },
                     {
-                        title: "Cosmo - The Challenge",
-                        image: "https://thepuzzle.digital/wp-content/uploads/2021/01/What-is-React-Native_-15.png"
+                        title: "Salento",
+                        image: "https://wander-lush.org/wp-content/uploads/2018/11/12-Salento.jpg"
                     },
                     {
-                        title: "Tenpo - Phone",
-                        image: "https://thepuzzle.digital/wp-content/uploads/2021/01/tenpo-mobile.png"
+                        title: "Valle de Cocora",
+                        image: "https://wander-lush.org/wp-content/uploads/2018/11/17-Cocora.jpg"
                     },
                     {
-                        title: "Tenpo - About",
-                        image: "https://thepuzzle.digital/wp-content/uploads/2020/12/tenpo-app-tarjeta-mastercard.png"
+                        title: "Ciudad perdida",
+                        image: "https://wander-lush.org/wp-content/uploads/2018/11/16-Lost-City.jpg"
+                    },
+                    {
+                        title: "Leticia",
+                        image: "https://wander-lush.org/wp-content/uploads/2018/11/18-leticia-parque-santander-sunset.jpg"
+                    },
+                    {
+                        title: "San Agustin",
+                        image: "https://wander-lush.org/wp-content/uploads/2021/01/San-Agustin-Depositphotos-Places-in-Colombia.jpg"
+                    },
+                    {
+                        title: "Las Lajas",
+                        image: "https://wander-lush.org/wp-content/uploads/2018/11/13-Las-Lajas-Ipiales-Talesfromthelens.jpg"
+                    },
+                    {
+                        title: "San Gil",
+                        image: "https://wander-lush.org/wp-content/uploads/2018/11/14-San-Gil-Mano-Chandra-Dhas-wiki-commons.jpg"
+                    },
+                    {
+                        title: "San Andres",
+                        image: "https://wander-lush.org/wp-content/uploads/2021/01/San-Andres-Island-Depositphotos-Places-in-Colombia.jpg"
+                    },
+                    {
+                        title: "Taganga",
+                        image: "https://wander-lush.org/wp-content/uploads/2021/01/Taganga-Depositphotos-Places-in-Colombia.jpg"
                     },
                 ]
                 let countPages = Math.ceil(objResult.length / numCards)
