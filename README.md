@@ -41,18 +41,18 @@ Requirements:
 - To persist the last position of the carousel, so when the app closes (is not running in memory) and opens again we need to start the carousel in that stored position  
 
 
-#Showcase
-##iOS
+# Showcase
+## iOS
 ![Carousel iOS](https://user-images.githubusercontent.com/8276103/132967677-328a05c0-7542-40a8-b4ce-57f5f1a2997c.gif)
 
 
 
-##Android
+## Android
 ![Carousel Android](https://user-images.githubusercontent.com/8276103/132967969-8085fe48-2688-4f0c-bf92-7a66b9816e83.gif)
 
 
 
-##Redux Persists
+## Redux Persists
 ![Redux persist](https://user-images.githubusercontent.com/8276103/132967676-50899b2a-a964-4e9a-b937-7e1fdbbb4c43.gif)
 
 
