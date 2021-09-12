@@ -1,6 +1,7 @@
-# Carousel App
+# Carousel App (Redux, Redux-persist)
 
 Autor: Jhonattan Solarte Martinez
+
 App: Carousel React Native, Redux, Redux-persist
 
 Installation
