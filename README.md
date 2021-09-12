@@ -39,3 +39,12 @@ Requirements:
 - The source of carousel block is endpoint on server that return following JSON:
   [{title: "First Block", image: [url1]},{title: "Second Block", image: [url2]}]
 - To persist the last position of the carousel, so when the app closes (is not running in memory) and opens again we need to start the carousel in that stored position  
+
+
+#Showcase
+iOS
+
+
+https://user-images.githubusercontent.com/8276103/132967118-9eba25e7-0c22-4742-b659-2c6d700098fc.mp4
+
+
