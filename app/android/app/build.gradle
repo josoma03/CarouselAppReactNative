@@ -132,7 +132,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.carousel"
+        applicationId "com.js.carousel"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
