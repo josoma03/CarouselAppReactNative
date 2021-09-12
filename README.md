@@ -42,9 +42,20 @@ Requirements:
 
 
 #Showcase
-iOS
+##iOS
+![Carousel iOS](https://user-images.githubusercontent.com/8276103/132967677-328a05c0-7542-40a8-b4ce-57f5f1a2997c.gif)
 
 
-https://user-images.githubusercontent.com/8276103/132967118-9eba25e7-0c22-4742-b659-2c6d700098fc.mp4
+
+##Android
+![Carousel Android](https://user-images.githubusercontent.com/8276103/132967969-8085fe48-2688-4f0c-bf92-7a66b9816e83.gif)
+
+
+
+##Redux Persists
+![Redux persist](https://user-images.githubusercontent.com/8276103/132967676-50899b2a-a964-4e9a-b937-7e1fdbbb4c43.gif)
+
+
+
 
 
