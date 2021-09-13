@@ -9,10 +9,12 @@ Installation
 1. Clone repository:
     https://github.com/josoma03/CarouselAppReactNative.git
 2. From the terminal, enter the folder: 'app
-    cd app
+    
+       cd app
 3. Install the project dependencies
-    yarn install
-    npx pod-install
+
+       yarn install
+       npx pod-install
     
 
 Configuration
