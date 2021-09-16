@@ -1,4 +1,4 @@
-export let contentMargin = 20
-export let cardMargin = 5
-export let numCards = 3
+export const contentMargin = 20
+export const cardMargin = 5
+export const numCards = 3
 

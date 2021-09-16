@@ -9,11 +9,11 @@ import {
 import { numCards } from '../../config/config'
 
 //ACTIONS CREATOR
-const updatePageAction = mac(CAROUSEL_UPDATE_PAGE, 'payload')
+export const updatePageAction = mac(CAROUSEL_UPDATE_PAGE, 'payload')
 const fetchStartAction = mac(CAROUSEL_FETCH_IMAGE_START)
 const fetchFailAction = mac(CAROUSEL_FETCH_IMAGE_FAIL)
 const fetchSuccessAction = mac(CAROUSEL_FETCH_IMAGE_SUCCESS, 'payload', 'count')
-/*Equivalente:
+/*Equivalent:
 const fetchSuccessAction = payload => ({
     type: CAROUSEL_FETCH_IMAGE_SUCCESS,
     payload,
@@ -29,7 +29,7 @@ export const getImages = () => {
         dispatch(fetchStartAction())
         try {
             setTimeout(() => {
-                let objResult = [
+                const objResult = [
                     {
                         title: "Medellin",
                         image: "https://wander-lush.org/wp-content/uploads/2018/11/Emily-Lush-Comuna-13-Medellin-26-1.jpg"
@@ -111,7 +111,7 @@ export const getImages = () => {
                         image: "https://wander-lush.org/wp-content/uploads/2021/01/Taganga-Depositphotos-Places-in-Colombia.jpg"
                     },
                 ]
-                let countPages = Math.ceil(objResult.length / numCards)
+                const countPages = Math.ceil(objResult.length / numCards)
                 dispatch(fetchSuccessAction(objResult, countPages))
             }, 1000)
         } catch (e) {

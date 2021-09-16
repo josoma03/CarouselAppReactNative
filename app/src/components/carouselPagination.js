@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Text, TouchableHighlight, View } from "react-native";
 import { connect } from "react-redux";
 import styles from "../styles/carouselPagination.style";
-import { updatePage } from '../redux/actions'
+import { updatePage, updatePageAction } from '../redux/actions'
+import { useDispatch, useSelector } from 'react-redux';
 
 
 const CarouselPaginationButton = ({ text, onPress, isEnable }) => {
@@ -12,14 +13,19 @@ const CarouselPaginationButton = ({ text, onPress, isEnable }) => {
         </TouchableHighlight>
     )
 }
-const CarouselPagination = props => {
+const CarouselPagination = () => {
+    const dispatch = useDispatch();
+    const props = useSelector(state => state.carouselReducer);  //reducers/index.js
+
     const isEnableBack = props.currentPage != 0
     const isEnableNext = props.currentPage != (props.countPages - 1)
+
+
     const nextPag = () => {
-        props.updatePage(props.currentPage + 1)
+        dispatch(updatePage(props.currentPage + 1))
     }
     const prevPag = () => {
-        props.updatePage(props.currentPage - 1)
+        dispatch(updatePage(props.currentPage - 1))
     }
 
     return (
@@ -29,8 +35,6 @@ const CarouselPagination = props => {
         </View>
     )
 }
-const mapStateToProps = (state) => {
-    return state.carouselReducer            //reducers/index.js
-}
 
-export default connect(mapStateToProps, { updatePage })(CarouselPagination);
+
+export default CarouselPagination

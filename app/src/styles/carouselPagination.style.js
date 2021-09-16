@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import { colorGray, colorBlue } from '../styles/themes'
 
 const styles = StyleSheet.create({
     text: {
@@ -7,10 +8,10 @@ const styles = StyleSheet.create({
         fontSize: 16
     },
     contentButtonEnabled: {
-        backgroundColor: '#007bff',
+        backgroundColor: colorBlue,
     },
     contentButtonDisabled: {
-        backgroundColor: '#C0C0C0',
+        backgroundColor: colorGray,
     },
     contentButton: {
         width: 40,

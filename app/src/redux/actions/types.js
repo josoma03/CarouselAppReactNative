@@ -2,8 +2,12 @@
 
 const makeType = mod => type => `${mod}/${type}`
 
-///makeActionCreator: recibe el tipo de la accion, y los argumentos. Esto retorna una funcion, la cual recibe mas argumentos
-///y esta retorna otra funcion. La constante action, es la que se va a definir, es un objeto que contiene el valor de type
+/**
+ * makeActionCreator: receives the type of the action, and the arguments. 
+ * This returns a function, which receives more arguments. and this returns another function. 
+ * The constant action, is the one that is going to be defined, 
+ * it is an object that contains the value of type
+ * */
 export const mac = (type, ...argNames) => (...args) => {
     const action = { type }
     argNames.forEach((arg, index) => {
