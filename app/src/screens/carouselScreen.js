@@ -15,10 +15,10 @@ const CarouselScreen = () => {
     const scrollRef = useRef()
     const dispatch = useDispatch();
     const props = useSelector(state => state.carouselReducer);       //reducers/index.js
+    //const currentPage = useSelector((state) => state.carouselReducer.currentPage)   
 
     useEffect(() => {
-        // load the images and update state
-        if (props.arrImages.length == 0) {
+        if (props.arrImages.length == 0) {      // load the images and update state
             dispatch(getImages())
         }
     }, [])
